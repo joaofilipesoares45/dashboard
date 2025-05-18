@@ -1,0 +1,388 @@
+@keyframes go-size {
+    go {
+        width: 0%;
+    }
+    to {
+        width: var(--size);
+    }
+}
+
+
+.page.home main .sect.overview {
+    padding-top: 10px;
+
+    header {
+        padding: 10px;
+        background-color: white;
+        border: solid 2px rgb(214, 214, 214);
+
+        h1 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .resume-section.list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-x: auto;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+        padding-block: 10px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            min-width: 200px;
+            gap: 5px;
+            border: solid 2px rgb(214, 214, 214);
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+
+            h4 {
+                font-weight: 400;
+                color: gray;
+            }
+
+            span {
+                font-size: 1.5rem;
+                font-weight: 550;
+            }
+
+        }
+    }
+
+    .graphics {
+        display: flex;
+        margin-top: 10px;
+        gap: 10px;
+
+        .graph {
+            background-color: white;
+            border: solid 2px rgb(214, 214, 214);
+            padding: 10px;
+            border-radius: 3px;
+
+            h3 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    font-size: .9rem;
+                    font-weight: 550;
+                }
+            }
+        }
+
+        .purchase-graph {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .debts-graph {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .line-graph {
+                width: 100%;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+
+                h4 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 100%;
+
+                    &:last-child p {
+                        background-color: rgba(255, 0, 0, 0.434);
+
+                        &::after {
+                            background-color: red;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                        font-size: .8em;
+                        border-radius: 20px;
+                        background-color: rgba(0, 0, 255, 0.434);
+                        color: white;
+                        position: relative;
+                        height: 10px;
+                        --size: 0%;
+
+                        &::after {
+                            content: "";
+                            text-align: end;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            background-color: rgba(0, 0, 255);
+                            border-radius: 20px;
+                            transition: .2s;
+                            width: 0%;
+                            animation: go-size 1s forwards;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .orders-list {
+        background-color: white;
+        border: solid 2px rgb(214, 214, 214);
+        padding: 10px;
+        border-radius: 3px;
+        margin-top: 10px;
+
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div.search {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                input {
+                    font-size: 1rem;
+                    border: solid 2px gainsboro;
+                    padding: 5px 10px;
+                }
+
+                svg {
+                    font-size: 1rem;
+                    position: absolute;
+                    right: 10px;
+                }
+            }
+        }
+
+        .head {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding-bottom: 5px;
+            border-bottom: solid 2px gainsboro;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            max-height: 120px;
+            overflow-y: auto;
+
+            gap: 10px;
+            padding-top: 10px;
+
+            .item {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                &[hidden]{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .page.home main .sect.overview {
+        padding-top: 10px;
+        padding-bottom: 20px;
+
+        header {
+            padding: 10px;
+            background-color: white;
+            border: solid 2px rgb(214, 214, 214);
+
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .resume-section.list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            overflow-x: auto;
+            width: 100%;
+            gap: 10px;
+            margin-top: 10px;
+            padding-block: 10px;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                min-width: 200px;
+                gap: 5px;
+                border: solid 2px rgb(214, 214, 214);
+                background-color: white;
+                padding: 10px;
+                border-radius: 5px;
+
+                h4 {
+                    font-weight: 400;
+                    color: gray;
+                }
+
+                span {
+                    font-size: 1.5rem;
+                    font-weight: 550;
+                }
+
+            }
+        }
+
+        .graphics {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            gap: 10px;
+
+            .graph {
+                background-color: white;
+                border: solid 2px rgb(214, 214, 214);
+                padding: 10px;
+                border-radius: 3px;
+
+                h3 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        font-size: .9rem;
+                        font-weight: 550;
+                    }
+                }
+            }
+
+            .purchase-graph {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: none;
+
+                h3 {
+                    width: 100%;
+                }
+
+                canvas {
+                    max-width: 280px;
+                    max-height: 280px;
+                }
+            }
+
+            .debts-graph {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .line-graph {
+                    width: 100%;
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+
+                    h4 {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .orders-list {
+            background-color: white;
+            border: solid 2px rgb(214, 214, 214);
+            padding: 10px;
+            border-radius: 3px;
+            margin-top: 10px;
+
+            h3 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                div.search {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    input {
+                        font-size: 1rem;
+                        border: solid 2px gainsboro;
+                        padding: 5px 10px;
+                    }
+
+                    svg {
+                        font-size: 1rem;
+                        position: absolute;
+                        right: 10px;
+                    }
+                }
+            }
+
+            .head {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding-bottom: 5px;
+                border-bottom: solid 2px gainsboro;
+
+                p {
+                    font-size: .9rem;
+
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+
+            .list {
+                display: flex;
+
+                flex-direction: column;
+                max-height: 120px;
+                overflow-y: auto;
+
+                gap: 10px;
+                padding-top: 10px;
+
+                span {
+                    display: none;
+                }
+
+                p {
+                    font-size: .8rem;
+                }
+
+                .item {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    align-items: center;
+                    /* text-wrap: nowrap; */
+                }
+            }
+        }
+    }
+}
