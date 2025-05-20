@@ -1,0 +1,30 @@
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        svg {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: red;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            font-weight: 550;
+            --color: red;
+            --back: #ffe4e4;
+        }
+    }
+
+
+}

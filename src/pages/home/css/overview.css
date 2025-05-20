@@ -1,5 +1,5 @@
 @keyframes go-size {
-    go {
+    from {
         width: 0%;
     }
     to {
